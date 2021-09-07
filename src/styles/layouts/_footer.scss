@@ -1,0 +1,104 @@
+.footer {
+  background-color: setColor(secondary);
+  h4,
+  h5,
+  p {
+    color: setColor(light);
+  }
+  &-subcribe {
+    &__form {
+      margin-bottom: emCal(16, 30);
+      &.ant-form {
+        position: relative;
+        .ant-input {
+          border-width: 0 0 2px 0;
+          border-radius: 5px;
+          padding: 8px;
+          border-color: setShadeColor(dark);
+          font-size: emCal(16, 15);
+          &:focus {
+            border-color: setColor(primary);
+          }
+        }
+        .ant-btn {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          height: 45px;
+          background-color: setColor(primary);
+          color: #fff;
+          font-weight: 700;
+          transform: translateY(-50%);
+          padding: 0px 15px;
+          &:hover {
+            color: setColor(light);
+          }
+        }
+      }
+    }
+  }
+  &-title {
+    @include typo($up: true, $fw: 700);
+    margin-bottom: 15px;
+  }
+  &-top {
+    padding: remCal(70) 0;
+    border: solid setShadeColor(border);
+    border-width: 1px 0 1px 0;
+    &-item {
+      @include mq(lg) {
+        margin-bottom: emCal(16, 50);
+      }
+      &.-col-one {
+        p {
+          @include typo($fsz: emCal(16, 15));
+          color: setColor(light);
+          margin-left: 25px;
+        }
+      }
+      &.-col-two {
+        ul {
+          list-style: none;
+          li {
+            a {
+              @include link($fsz: emCal(16, 15), $lh: emCal(15, 30));
+              color: setColor(light);
+            }
+            a:hover {
+              color: setShadeColor(medium);
+            }
+          }
+        }
+      }
+      &.-col-three {
+        @include mq(lg) {
+          text-align: center;
+        }
+        @include mq(sm) {
+          text-align: left;
+        }
+        p {
+          @include typo(
+            $fsz: emCal(16, 15),
+            $lh: emCal(15, 26),
+            $color: setShadeColor(medium)
+          );
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &-bottom {
+    text-align: center;
+    padding: emCal(16, 17) 0;
+    p {
+      @include typo(
+        $fsz: emCal(16, 14),
+        $lh: emCal(15, 24),
+        $color: setShadeColor(medium)
+      );
+    }
+  }
+}

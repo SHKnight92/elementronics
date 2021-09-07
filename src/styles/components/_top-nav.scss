@@ -1,0 +1,33 @@
+.top-nav {
+  background-color: setColor(light);
+  border-bottom: 1px solid rgba(#fff, 20%);
+  padding: emCal(16, 6) 0;
+  @include mq(md) {
+    display: none;
+  }
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-links {
+    display: flex;
+    &__item {
+      &:first-child {
+        margin-right: emCal(16, 30);
+      }
+      a {
+        font-weight: bold;
+        @include link(
+          $fsz: emCal(16, 15),
+          $color: setColor(primary),
+          $hvr-color: darken(#000, 20%)
+        );
+        display: inline-block;
+        i {
+          margin-right: emCal(16, 10);
+        }
+      }
+    }
+  }
+}
