@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { SHOP } from \"../defines\";\nexport var setSort = function setSort(sortType) {\n  return {\n    type: SHOP.SET_SORT,\n    sortType: sortType\n  };\n};\nexport var setSubCategory = function setSubCategory(subCategory) {\n  return {\n    type: SHOP.SET_SUBCATEGORY,\n    subCategory: subCategory\n  };\n};","map":null,"metadata":{},"sourceType":"module"}

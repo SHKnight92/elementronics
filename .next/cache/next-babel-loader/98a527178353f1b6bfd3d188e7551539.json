@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { SHOP } from \"../defines\";\nexport const setSort = sortType => ({\n  type: SHOP.SET_SORT,\n  sortType\n});\nexport const setSubCategory = subCategory => ({\n  type: SHOP.SET_SUBCATEGORY,\n  subCategory\n});","map":null,"metadata":{},"sourceType":"module"}
